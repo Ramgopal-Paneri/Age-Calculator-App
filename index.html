@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="index.css">
+  <title>Age calculator app | challenge by:Frontend Mentor</title>
+  <meta name="theme-color" content="#854dff" />
+</head>
+<body>
+  <div id="container">
+    <div class="age-calculator">
+      <div id="main">
+        <!-- <div id="inputSection"> -->
+        <form>
+          <div class="input-f-items">
+            <label for="day">day</label>
+            <br>
+            <input type="text" id="day" minlength="1" maxlength="2" size="2" placeholder="DD" required
+              pattern="[0-9]{2}">
+          </div>
+
+          <div class="input-f-items">
+            <label for="mon">Month</label>
+            <br>
+            <input type="text" id="mon" minlength="1" maxlength="2" size="2" placeholder="MM" required
+              pattern="[0-9]{2}">
+          </div>
+
+          <div class="input-f-items">
+            <label for="year">Year</label>
+            <br>
+            <input type="text" id="year" minlength="4" maxlength="4" size="4" placeholder="YYYY" required
+              pattern="[0-9]{4}">
+          </div>
+        </form>
+        <div class="errors" id="errors">
+          <p id="day-error"><i>must be a valid day</i></p>
+          <p id="month-error"><i> must be a valid month</i></p>
+          <p id="year-error"><i>year must be in past</i></p>
+        </div>
+      </div>
+      <div class="center-elements">
+        <hr>
+        <div><button type="submit" id="button"><img src="assets/images/icon-arrow.svg" alt=""></div></button>
+      </div>
+
+      <div id="output">
+        <div>
+          <h1><b id="yearFinal">--</b> years</h1>
+        </div>
+        <div>
+          <h1><b id="monFinal">--</b> months</h1>
+        </div>
+        <div>
+          <h1><b id="dayFinal">--</b> days</h1>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://ramgopal-portfolio.netlify.app/">Ramgopal Paneri</a>.
+      </div>
+    </footer>
+  </div>
+  <script src="https://animejs.com/lib/anime.min.js"></script>
+  <script src="index.js"></script>
+</body>
+</html>

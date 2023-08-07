@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{ font-family: 'Poppins', sans-serif;  box-sizing: border-box;
+}
+html,body{
+   height: 100%;
+background-color:hsl(0, 0%, 86%);
+
+}
+input:hover{
+   cursor: pointer;
+   border: .1rem solid rgb(133, 77, 255);
+   outline: .1rem solid hsl(259, 100%, 65%);
+}
+.attribution { 
+   text-align:center;
+}.attribution a { color: hsl(228, 45%, 44%); }
+ #container{
+    display:grid;
+    grid-template-columns: auto;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+   width: 100%;
+    height:100%;
+    padding:3.5%;
+ }
+ .age-calculator{
+   margin: auto;
+   background-color:hsl(0, 0%, 100%);
+   border-radius:1rem 1rem 3.5rem 1rem;
+   width: 100%;
+   padding: 5%;
+}
+ #main{
+   padding:5%;
+    width:80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   }
+   form{ display:grid;
+      grid-template-columns: auto auto auto;
+      justify-content:space-between;
+      /* align-items: center;     */
+   }
+   .errors{display:inline-flex;width: 105%;gap: 4%;}
+   .errors p{
+      color: hsl(0, 100%, 67%);
+      font-weight: 400;
+      font-size: small;
+   }
+label{text-transform:uppercase;font-weight:800;color:hsl(0, 1%, 44%);letter-spacing: .1rem;}
+input{width:5.7rem;font-size:xx-large;padding: .4rem;border-radius: .5rem;color: hsl(0, 0%, 8%);font-weight: 800;border: 0.1rem solid hsl(0, 0%, 8%);}
+@media (max-width:430px) {
+   input{
+      width:3.7rem ;
+      font-size: large;
+   }
+}    
+.center-elements{  margin: 1.5rem 0;position: relative;padding-right: 1rem;}
+.center-elements img{background-color:hsl(259, 100%, 65%);padding: .5rem;border-radius: 50%;width: 100%;}
+.center-elements div{position: absolute;right: 0;top: -20px;}
+.center-elements div button{border: none;background-color:hsl(259, 100%, 65%);border-radius: 50%;cursor: pointer;}
+.center-elements button:hover{background-color:hsl(0, 0%, 8%);}.center-elements button:hover img{background-color: hsl(0, 0%, 8%);}
+.center-elements button:active{background-color:hsl(0, 0%, 8%);}
+@media (max-width:430px) {
+   form{
+      gap:2rem;
+   }
+   label{letter-spacing: 0;}
+   #main{width: 100%;}
+   .center-elements div{position: absolute;right:35%;top: -20px;}
+}
+@media (max-width:430px) {
+   .center-elements div button,img{width: 80%;}
+}
+#output{
+   font-weight:800;
+   color: hsl(0, 0%, 8%);
+}
+#output div{width: 100%;}
+#output div h1{ font-size: 4rem;display:inline;color: hsl(0, 0%, 8%);font-weight: 800;}
+#output div h1 b{color: hsl(259, 100%, 65%);}
+@media (max-width:430px) {
+   #output div h1{
+      font-size:2.9rem;
+   }
+}
