@@ -407,7 +407,7 @@ setTimeout(()=>{day.style="";
 let birthdate = new Date(`${yearVal}`,`${monVal}`,`${dayVal}`);
 
 const yearFinal=currentDate.getFullYear()-birthdate.getFullYear();
-const monFinal=(currentDate.getMonth()+1)-birthdate.getMonth();
+const monFinal=currentDate.getMonth()-birthdate.getMonth();
 const dayFinal=(30-birthdate.getDate())+currentDate.getDate();
 
 const resultYear = document.getElementById('yearFinal');

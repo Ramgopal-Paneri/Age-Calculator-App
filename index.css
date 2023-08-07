@@ -57,6 +57,11 @@ input{width:5.7rem;font-size:xx-large;padding: .4rem;border-radius: .5rem;color:
       width:3.7rem ;
       font-size: large;
    }
+}@media (min-width:430px) and (max-width:500px) {
+   input{
+      width:4rem ;
+      font-size:larger;
+   }
 }    
 .center-elements{  margin: 1.5rem 0;position: relative;padding-right: 1rem;}
 .center-elements img{background-color:hsl(259, 100%, 65%);padding: .5rem;border-radius: 50%;width: 100%;}
