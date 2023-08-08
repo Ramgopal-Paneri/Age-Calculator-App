@@ -405,16 +405,24 @@ setTimeout(()=>{day.style="";
     let monVal = mon.value;
     let dayVal = day.value;
 let birthdate = new Date(`${yearVal}`,`${monVal}`,`${dayVal}`);
+const newDate = new Date(currentDate-birthdate);
 
-const yearFinal=currentDate.getFullYear()-birthdate.getFullYear();
-let monFinal=currentDate.getMonth()-birthdate.getMonth();
-const dayFinal=(30-birthdate.getDate())+currentDate.getDate();
+let yearFinal=newDate.getFullYear()-1970;
+let monFinal=(12-birthdate.getMonth())+currentDate.getMonth();
+const dayFinal=(30-birthdate.getDate())+currentDate.getDate()+1;
 
+if(monFinal>12){
+  monFinal=monFinal-12;
+}
 const resultYear = document.getElementById('yearFinal');
 const resultMon = document.getElementById('monFinal');
 const resultDay = document.getElementById('dayFinal');
 if(monFinal<0){
   monFinal=birthdate.getMonth()-currentDate.getMonth();
+}
+if(monFinal==12){
+  yearFinal=yearFinal+1;
+monFinal=0;
 }
 anime({
   targets: resultYear,
